@@ -1,0 +1,26 @@
+-- Criar a tabela de produtos
+CREATE TABLE products (
+    id INTEGER PRIMARY KEY, 
+    name TEXT,
+    price REAL
+);
+
+-- Inserir alguns produtos
+INSERT INTO products (name, price) VALUES ('laptop', 2500.99);
+INSERT INTO products (name, price) VALUES ('mouse', 50.00);
+INSERT INTO products (name, price) VALUES ('teclado', 100.00);
+
+-- Inserir todos os produtos
+SELECT * FROM products;
+
+-- Atualizar o preço de um produto
+UPDATE products SET price = 45.00 WHERE name = 'mouse';
+
+-- Verificar a atualização 
+SELECT * FROM products;
+
+-- Excluir o produto 'teclado'
+DELETE FROM products WHERE name = 'teclado';
+
+-- Verificar se foi excluído
+SELECT * FROM products;
